@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form method="post" action="procesar.php">
+        <label class="labelDato" for="fecha">
+            Fecha:
+        </label><input type="date" id="fecha" name="fecha" required>
+        <label class="labelDato" for="nombre">
+            Nombre:
+        </label> <input type="text" id="nombre" name="nombre" required>
+        <label class="labelDato" for="impuesto">
+            Impuesto:
+        </label class="labelDato"> <select type="text" id="impuesto" name="impuesto" required>
+            <option value="10">Impuesto 1 (10%)</option>
+            <option value="20">Impuesto 2 (20%)</option>
+        </select>
+        <label class="labelDato" for="cantidadElementos">
+            Cantidad Elementos:
+        </label> <input type="number" id="cantidadElementos" name="cantidadElementos" value=1 onchange="actualizarFilas(this)" required>
+
+        <h3 id="tituloDetalles">Detalles</h3>
+        <h5>Código</h5>
+        <h5>Descripción</h5>
+        <h5>Cantidad</h5>
+        <h5>Precio</h5>
+
+      
+
+    </form>
+
+    <script defer src="utilities.js"> </script>
+</body>
+
+</html>

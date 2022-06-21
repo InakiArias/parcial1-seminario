@@ -1,0 +1,99 @@
+body{
+    font-family: Arial, Helvetica;
+    background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgb(247, 189, 2) 57%);
+    line-height: 1.6em;
+    background-size: cover;
+    min-height: 97.2vh;
+    background-repeat: no-repeat;
+
+    --colorFondoSecundario: orangered;
+    --colorFondoInterno: white;
+    --colorFuenteTabla: white;
+    --colorHover: rgb(255, 123, 0);
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    text-align: center; 
+}
+
+
+td{
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--colorFuenteTabla);
+}
+
+td, th {
+    border: 2px solid black;
+}
+
+th {
+    background-color: var(--colorFondoSecundario);
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#tablaVacia {
+    border: none;
+    opacity: 0;
+}
+
+td:first-child {
+    background-color: var(--colorFondoSecundario);
+}
+
+td {
+    background-color: var(--colorFondoInterno);
+    color: black;
+}
+
+form {
+    background-color: white;
+    border: 8px inset black;
+    
+    width: 60vw;
+    margin: auto;
+    height: fit-content;
+    
+    padding: 5vw;
+    padding-top: 1vw;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.4vw;
+}
+
+.labelDato {
+    grid-column: 1;
+}
+
+#tituloDetalles {
+    grid-column: 1 / 5;
+    text-align: center;
+    margin: 0;
+}
+
+h5 {
+    margin: 0;
+}
+
+button {
+    background:black; 
+    color: white;
+    font-size:16px; 
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+}
+
+button:hover {
+    background: var(--colorHover);
+}
+
+a {
+    background-color: var(--colorHover);
+    color: var(--colorFondoSecundario);
+}
