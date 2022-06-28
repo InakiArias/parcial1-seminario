@@ -9,9 +9,13 @@
 </head>
 <body>
     <table>
-        <?php
-            
-            echo "<tr><td>Fecha: </td><td>".$_POST["fecha"]."</td></tr>";
+        <?php     
+            function formatearFecha($fecha) {
+                $arr = explode("-", $fecha);
+                return $arr[2]."/".$arr[1]."/".$arr[0];
+            }
+        
+            echo "<tr><td>Fecha: </td><td>".formatearFecha($_POST["fecha"])."</td></tr>";
             echo "<tr><td>Nombre: </td><td>".$_POST["nombre"]."</td></tr>";
             echo "<tr><td>Impuesto: </td><td>".$_POST["impuesto"]."%</td></tr>";
             echo "<tr><td colspan=5>Detalle</td></tr>";
@@ -67,8 +71,6 @@
             </tr>";
         ?>
     </table>
-
-
 </body>
 </html>
 

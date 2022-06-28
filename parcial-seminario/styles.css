@@ -1,15 +1,18 @@
 body{
     font-family: Arial, Helvetica;
-    background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgb(247, 189, 2) 57%);
+    background: linear-gradient(45deg, var(--fondoGrad1), var(--fondoGrad2));
     line-height: 1.6em;
     background-size: cover;
     min-height: 97.2vh;
     background-repeat: no-repeat;
 
-    --colorFondoSecundario: orangered;
-    --colorFondoInterno: white;
-    --colorFuenteTabla: white;
-    --colorHover: rgb(255, 123, 0);
+    --fondoGrad1: black 0%;
+    --fondoGrad2: rgb(247, 141, 2) 50%;
+    --colorTablaFondoDestacado: orangered;
+    --colorTablaFondoInterno: white;
+    --colorFondoBotonHover: rgb(255, 123, 0);
+    --colorFondoA: black;
+    --colorFondoAHover: var(--colorFondoBotonHover);
 }
 
 table {
@@ -30,23 +33,18 @@ td, th {
 }
 
 th {
-    background-color: var(--colorFondoSecundario);
+    background-color: var(--colorTablaFondoDestacado);
     color: white;
     padding-left: 10px;
     padding-right: 10px;
 }
 
-#tablaVacia {
-    border: none;
-    opacity: 0;
-}
-
 td:first-child {
-    background-color: var(--colorFondoSecundario);
+    background-color: var(--colorTablaFondoDestacado);
 }
 
 td {
-    background-color: var(--colorFondoInterno);
+    background-color: var(--colorTablaFondoInterno);
     color: black;
 }
 
@@ -90,10 +88,23 @@ button {
 }
 
 button:hover {
-    background: var(--colorHover);
+    background: var(--colorFondoBotonHover);
 }
 
 a {
-    background-color: var(--colorHover);
-    color: var(--colorFondoSecundario);
+    background-color: var(--colorFondoA);
+    color: var(--colorFondoAHover);
+    border: 1.5px solid var(--colorFondoAHover);
+
+
+    padding: 0.1vw;
+    width: 30%;
+    display: inline-block;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: var(--colorFondoAHover);
+    color: var(--colorFondoA);
+    border: 1.5px solid black;
 }
